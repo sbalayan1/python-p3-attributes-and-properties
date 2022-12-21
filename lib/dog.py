@@ -6,6 +6,10 @@ class Dog:
     #     self._name = ""
     # breeds = ["Mastiff", "Chihuahua", "Corgi", "Shar Pei", "Beagle", "French Bulldog", "Pug", "Pointer"]
 
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
     def get_name(self):
         pass
         return self._name
@@ -13,7 +17,7 @@ class Dog:
     def set_name(self, name):
         pass
         if (type(name) == str) and (1 < len(name) < 25):
-            self._name = name
+            self._name = input
         else:
             print("Name must be string between 1 and 25 characters.")
 
@@ -33,3 +37,7 @@ class Dog:
 
     name = property(get_name, set_name)
     breed = property(get_breed, set_breed)
+
+test = Dog("john", "Mastiff")
+print(test.name)
+print(test.breed)
